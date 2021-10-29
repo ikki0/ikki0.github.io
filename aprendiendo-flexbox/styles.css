@@ -1,0 +1,59 @@
+body{
+    --rojo: red;
+    font-family: arial;
+    text-align: center;
+}
+
+#layout{
+    display: flex; /*activamos flex, se organizan a la izq.*/
+    /*display: inline-flex el ancho es automatica, se centra , se hace pequeno*/
+    /*
+    flex-direction: row;
+    flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    /*space between el contenido se distribuye con menos margen lateral*/
+    /*space-around el contenido se distribuye dejando margenes por medio*/
+    /*flex-end Todo el contenido va hacia la derecha*/
+    /*flex-center se queda en el centro*/
+    height: 600px;
+    align-items: flex-start;
+ 
+    /*center, el contenido se queda centrado verticalmente*/
+    /*baseline, la altura se ajusta al tamano de las cajas, del contenido dentro*/
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja{
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background-color: gray;
+}
+
+.red{
+    align-self: flex-start;
+    background-color: red;
+}
+
+.green{
+    align-self: center;
+    background-color: green;
+}
+
+.blue{
+    align-self: center; 
+    background-color: blue;
+}
+
+.orange{
+    align-self: flex-end;
+    background-color: orange;
+}

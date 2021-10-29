@@ -1,0 +1,51 @@
+body{
+    --rojo: red;
+    font-family: arial;
+    text-align: center;
+}
+
+#layout{
+    display: flex; /*activamos flex, se organizan a la izq.*/
+    /*display: inline-flex el ancho es automatica, se centra , se hace pequeno*/
+    /*
+    flex-direction: row;
+    flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja{
+    flex-grow: 1;
+    /*todos los elementos van a crecer en proporcion 1 ocupado todo el espacio*/
+    flex-basis: calc((100%/3) - 68px); 
+    /*sirve para especificar el tamano, ancho*/
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background-color: gray;
+}
+
+.red{
+    
+    background-color: var(--rojo);
+}
+
+.green{
+    background-color: var(--rojo);
+}
+
+.blue{
+        
+    background-color: var(--rojo);
+}
+
+.orange{
+    
+    background-color: orange;
+}
