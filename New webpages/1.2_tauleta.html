@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Taula senzilla</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+  <h1>Listat de pel·lícules</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <!--crear filas-->
+        <th>Títol</th>
+        <!--crear columnas título-->
+        <th>Gènere</th>
+        <!--crear columnas título-->
+        <th>Valoració</th>
+        <!--crear columnas título-->
+        <th>Recomanable</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <!--cuerpo de la tabla-->
+      <tr>
+        <!--primera fila de tabla-->
+        <td>PulpFiction</td>
+        <!--primera celda-->
+        <td>Acció/Violència</td>
+        <!--segunda celda-->
+        <td>9</td>
+        <!--tercera celda-->
+        <td>Si</td>
+        <!--cuarta celda-->
+      </tr>
+
+      <tr>
+        <!--segunda fila de tabla-->
+        <td>La vida de Brian</td>
+        <td>Comedia</td>
+        <td>10</td>
+        <td>Si</td>
+      </tr>
+
+      <tr>
+        <!--tercera fila de tabla-->
+        <td>Crepusculo</td>
+        <td>Accio</td>
+        <td>5</td>
+        <td>No</td>
+      </tr>
+
+      <tr>
+        <!--cuarta fila de tabla-->
+        <td>Madagascar</td>
+        <td>Animacio</td>
+        <td>8</td>
+        <td>Si</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <br>
+
+  <table class="tables">
+
+    <tr>
+      <!--crear primera fila-->
+      <td>A</td>
+      <!--crear celda-->
+      <td>B</td>
+      <!--crear celda-->
+    </tr>
+
+    <tr>
+      <!--crear segunda fila-->
+      <td rowspan="4">C</td>
+      <td>D1</td>
+      <!--Dentro de la segunda fila, crear primera celda-->
+
+    </tr>
+
+    <tr>
+      <!--dentro de la segunda fila, crear segunda fila-->
+      <td>D2</td>
+      <!--crear segunda celda, dentro de la 2 fila-->
+    </tr>
+
+    <tr>
+
+      <td>D3</td>
+
+    </tr>
+
+    <tr>
+      <td>D4</td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+
+  <h3> prueba nuevas etiquetas</h3>
+  <table class="tables">
+
+    <caption>título de la tabla</caption>
+    <thead>
+      <tr>
+        <!--crear filas-->
+        <th>A</th>
+        <!--crear columnas título-->
+        <th>B</th>
+        <!--crear columnas título-->
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <!--cuerpo de la tabla-->
+      <tr>
+        <!--primera fila de tabla-->
+        <td rowspan="4">C</td>
+        <!--primera celda-->
+        <td>D1</td>
+
+        <!--segunda celda-->
+
+      </tr>
+
+      <tr>
+        <td>D2</td>
+      </tr>
+
+      <tr>
+        <td>D3</td>
+      </tr>
+
+      <tr>
+        <td>D4</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+
+  <table class="tables">
+    <thead>
+      <tr>
+        <td colspan="3">A</td>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>B1</td>
+      </tr>
+
+      <tr>
+        <td>B2</td>
+        <td>C1</td>
+        <td>C2</td>
+      </tr>
+      <tr>
+        <td>B3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section>
+
+    <h3>Datos del producto</h3>
+    <form id="myform">
+      <label>Nombre del producto</label>
+      <input type="text">
+      <label>Descripción del producto</label>
+      <textarea cols="23" rows="4">  </textarea>
+      <label>casilla checkbox</label>
+      <input type="checkbox">
+
+    </form>
+
+
+  </section>
+
+  <br>
+  <br>
+  <br>
+
+  <section>
+    <table id="final_table">
+      <thead>
+        <tr>
+          <td colspan="3">Table Header</td>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td colspan="3">2 FILA 1 CELDA</td>
+        </tr>
+
+        <tr>
+          <td>1st Column</td>
+          <td>2nd Column</td>
+          <td>3rd Column</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">4 fila 3 CELDAS VERTICALES</td>
+          <td rowspan="2">4 FILA 2 CELDAS VERTICALES</td>
+          <td>1st Cell</td>
+        </tr>
+
+        <tr>
+          <td>2nd Cell</td>
+        </tr>
+
+        <tr>
+          <td>3rd Cell</td>
+          <td>3rd Cell</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+
+</body>
+
+</html>
+
+<!--colspan: unificar celdas horizontales-->
+<!--rowspwan: unificar celdas verticales-->
