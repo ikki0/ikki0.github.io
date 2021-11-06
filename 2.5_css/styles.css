@@ -1,0 +1,67 @@
+td,
+th,
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+  color: aquamarine;
+}
+
+h2{
+    color: blue;
+}
+
+p > strong {
+  color: red;
+}
+
+span.destacat{
+    color: gold;
+}
+
+p a{
+    color: red;
+}
+
+p em{
+    color: blue;
+}
+
+span.especial{
+    color: violet;
+}
+
+table caption{
+    color: blue;
+}
+
+th.especial,
+td strong{
+    color: gold;
+}
+
+tfoot tr,
+tbody tr:nth-child(2) th{
+    color: red;
+}
+
+td{
+    color: green;
+}
+
+#adicional{
+  
+    color: rgb(212, 182, 9);
+}
+
+span#especial{
+    color: rgb(226, 19, 164);
+}
+
+p:nth-child(3) a{
+    color: green;
+}

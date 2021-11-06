@@ -1,0 +1,42 @@
+*{
+    text-align: center;
+    color:white;
+}
+header{
+    background-color: grey;
+    padding: 12px;
+}
+nav{
+    background-color: pink;
+    margin-bottom: 5px;
+}
+#principal{
+    display: flex;
+}
+section#lateral{
+    width: 30%;
+    background-color: green;
+    margin-right: 5px;
+}
+section#secundari{
+    width: 70%;
+    background-color: greenyellow;
+}
+article{
+    background-color: blue;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+article{
+    margin-bottom: 5%;
+}
+div#peu{
+    background-color: orange;
+    
+}
+.igual{
+    padding: 12px;
+    margin-top: 5px;
+}
