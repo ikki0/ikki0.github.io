@@ -1,0 +1,31 @@
+/* Agregamos un pseudoelemento que sirve para agregar
+un elemento dentro de otro elemento  */
+/* Es necesario que cunado una clase tenga un espacio entre dos palabras
+unirlas con un "."  */
+.boton.uno::after {
+	/* Cadena vacia, necesaria para usar el pseudoelemento */
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #c4b107;
+	/* Gracias a position absolute abarcamos todo el contenido del contenedo
+	padre gracias a que esta tiene position relative */
+	position: absolute;
+	/* Para que el texto se encuentra encima de la capa es necesario
+	darle prioridad con z-index */
+	z-index: 1;
+	/* para mover la capa hacia arriba utilizar top */
+	top: -80px;
+	/* Es necesario para asegurar que la capa quede pegada a la izq del boton */
+	left: 0;
+	/* La transicion entrara despacio, luego se movera mas rapido en la mitad
+	de la animacion y al final se movera lento*/
+	transition: 0.3s ease-in-out;
+
+}
+/* Cuando estemeos delante del boton uno y hacemos un hover, accedemos al pseudoelemento
+after */
+.boton.uno:hover::after {
+	/* bajamos el elemento */
+	top: 0;
+}
