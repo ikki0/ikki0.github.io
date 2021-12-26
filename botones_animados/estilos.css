@@ -54,7 +54,7 @@ h1 {
 	font-weight: 500;
 	cursor: pointer;
 	text-transform: uppercase;
-	transition: 0.3 ease all; 
+	/* transition: 0.3 ease all;  */
 	border-radius: 5px;
 	position: relative;
 	/* Es necesario un overflow para respetar los border/radius 
@@ -67,5 +67,5 @@ h1 {
 	/* Gracias a este z index indicamos que esta capa se mostrara 
 	detras de la capa 1 en los botones */
 	z-index: 2;
-	transition: 0.3s ease all;
+	/* transition: 0.3s ease all; */
 }
