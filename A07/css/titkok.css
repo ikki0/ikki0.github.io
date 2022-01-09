@@ -1,0 +1,23 @@
+#redes_sociales #tiktok::after {
+    content:"";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: -90px;
+    top: 0;
+    border-bottom: 52px solid red;
+    border-right: 52px solid transparent;
+    transition: 0.3s ease-in-out all;
+}
+
+#redes_sociales #tiktok:hover::after {
+    left: 0;
+}
+
+#tiktok svg{
+    transition: 0.4s ease-in-out all;
+}
+
+#tiktok:hover a svg{
+    color: white;
+}

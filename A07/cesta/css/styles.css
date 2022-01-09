@@ -1,0 +1,275 @@
+:root {
+    --color_primario: #EB5E28;
+    --color_secundario: #FFFCF2;
+    --color_fondo: #CCC5B9;
+    --color_letra: #403D39;
+    --fuente_primaria: 'Roboto', sans-serif;
+    --fuente_secundaria: 'Oswald', sans-serif;
+    --fuente_terciaria: 'Indie Flower', cursive;
+    --fuente_cuarta: 'nevis', sans-serif;
+    --fuente_quinta: 'Fjalla One', sans-serif;
+} 
+* img {
+    display: block;
+    /* la relacion de aspecto de un manga es muy cercana a 12/18 */
+    aspect-ratio: 12/18;
+    width: 140px;
+    /* width: 225px;
+    height: 400px; */
+    /* esta propiedad sirve para que la imagen ocupe todo el espacio
+      sin distorsionarse */
+    object-fit: cover;
+    border: 1px solid black;
+    transition: 0.3s ease-in-out all;
+    cursor: pointer;
+
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color_fondo);
+}
+
+.main {
+    width: 90%;
+    height: 93%;
+    background-color: var(--color_secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 60px;
+}
+
+.main h1 {
+    text-transform: uppercase;
+    font-family: var(--fuente_primaria);
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 0.05em;
+    /* Para hacer un degradado de color arco iris*/
+    background: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.wrap #content {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 50px !important;  
+    grid-template-areas: 
+    "cards form"
+    "total pago";
+    row-gap: 40px;
+    column-gap: 55px;    
+}
+
+#cards{
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "primero"
+    "segundo";
+    justify-items: center;
+    align-items: center;
+    border-right: 3px solid black;
+    /* margin-right: 50px; */
+    
+}
+
+.card {
+    width: 80%;
+    border-bottom: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.primero {
+    grid-area: primero;
+    align-self: start;
+    padding: 0px 0px 25px 0px;
+}
+
+.card.segundo {
+    grid-area: segundo;
+    padding: 25px 0px 25px 0px;
+}
+
+.card .informacion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; 
+    row-gap: 5px;
+}
+
+
+#cards h3 {
+    color: color var(--color_letra);
+    font-family: var(--fuente_primaria);
+    text-transform: uppercase;
+    font-weight: bold;
+    /* text-shadow da un sombreado al texto. El primer valor indica el desplazamiento horizontal,
+    el segundo valor es el dezplazamiento vertical y el tercer(opcional) valor indica el desenfoque y el
+    cuarto valor indica el color */
+    letter-spacing: 0.03em;
+    font-size: 18px;
+}
+
+
+#cards p {
+    color: color var(--color_letra);
+    font-family: var(--fuente_primaria);
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+}
+
+#total {
+    height: 100%;
+    grid-area: total;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-right: 50px;
+}
+
+#total p {
+    font-family: var(--fuente_primaria);
+    color:var(--color_letra);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    font-size: 25px;
+}
+
+#direccion {
+    grid-area: form;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+}
+
+#direccion h3 {
+    font-family: var(--fuente_primaria);
+    color:var(--color_letra);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    font-size: 23px;
+}
+
+#direccion #envio {
+    width: 60%;
+}
+
+
+#direccion #envio input{
+    width: 42%;
+    height: 32px;
+    margin: 12px auto;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color_letra);
+    box-shadow: 1px 1px 1px #ccc inset; 
+    text-transform: uppercase;
+    font-family: var(--fuente_primaria);
+    transition: all 300ms;
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+#direccion #envio input:focus{
+    color: #555;
+    box-shadow: 1px 1px 1px grey inset;
+}
+
+#direccion #envio input:nth-child(3) {
+    width: 91%;
+}
+
+#pago {
+    grid-area:  pago;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -255px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+#pago h2 {
+    font-family: var(--fuente_primaria);
+    color:var(--color_letra);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    font-size: 23px;
+}
+
+#pago #form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 5px;
+    
+}
+
+#form label {
+    font-family: var(--fuente_primaria);
+    color: var(--color_letra);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    accent-color: red;
+}
+
+
+#boton button {
+    aspect-ratio: 8/3;
+    width: 150px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background: var(--color_primario);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: 0.03em;
+}

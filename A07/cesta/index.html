@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>cesta de mangas</title>
+
+    <!-- Documento para normalizar estilos css -->
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- fuentes letras -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@200&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet" />
+    <link href="http://fonts.cdnfonts.com/css/nevis" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrap">
+            <h1>cesta de mangas</h1>
+            <div id="content">
+                <div id="cards">
+                    <div class="card primero">
+                        <div class="enlace">
+                            <a href="#">
+                                <img src="../portadas/kimetsu_no_yaiba.png" alt="imagen manga kimetsu no yaiba" />
+                            </a>
+                        </div>
+
+                        <div class="informacion">
+                            <h3>kimetsu no yaiba 01</h3>
+                            <p>7,5€</p>
+                        </div>
+                    </div>
+
+                    <div class="card segundo">
+                        <div class="enlace">
+                            <a href="#">
+                                <img src="../portadas/horimiya.png" alt="imagen horimiya 01" />
+                            </a>
+                        </div>
+
+                        <div class="informacion">
+                            <h3>horimiya 01</h3>
+                            <p>7,5€</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="total">
+                    <p>total: 15€</p>
+                </div>
+
+                <div id="direccion">
+                    <h3>dirección de envío</h3>
+                    <div id="envio">
+                        <form>
+                            <input type="text" placeholder="nombre" />
+
+                            <input type="text" placeholder="apellidos" />
+
+                            <input type="email" placeholder="mail" />
+
+                            <input type="text" placeholder="ciudad" />
+
+                            <input type="text" placeholder="calle" />
+
+                            <input type="tel" placeholder="telefono" />
+                        </form>
+                    </div>
+                </div>
+
+                <div id="pago">
+                    <h2>método de pago</h2>
+                    <form id="form">
+                        <label class="radio uno">
+                            <!--value="a" Este valor luego puede sevirnos para seleccionar dicho elemento-->
+                            <input type="radio"  name="pago" checked >
+                            tarjeta de crédito/débito
+                        </label>
+
+                        <label class="radio dos">
+                            <input type="radio" name="pago"  />
+                            paypal
+                        </label>
+                        
+                    </form>
+
+                    <div id="boton">
+                        <a href="./compra/index.html">
+                            <button type="submit">comprar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

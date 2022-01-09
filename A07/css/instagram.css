@@ -1,0 +1,31 @@
+#redes_sociales #instagram::after {
+    content:"";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: -125px;
+    top: -5px;
+    /* left: -90px; */
+    /* border-bottom: 52px solid  violet; */
+    border-right: 89px solid transparent ;
+    /* border-left: 50px solid transparent; */
+    border-image: linear-gradient(#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d) ;
+    border-image-slice: 1;
+    /* border-right: 52px solid transparent; */
+    transition: 0.3s ease-in-out all;
+    transform: rotate(45deg);
+
+}
+
+#redes_sociales #instagram:hover::after {
+    left: -49px;
+}
+
+#instagram svg{
+    transition: 0.4s ease-in-out all;
+}
+
+#instagram:hover a svg{
+    color: white;
+}

@@ -1,0 +1,21 @@
+#redes_sociales #facebook a::after {
+    content:"";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: -90px;
+    top: 0;
+    border-bottom: 52px solid  #3b5998;
+    border-right: 52px solid transparent;
+    transition: 0.3s ease-in-out all;
+}
+
+#redes_sociales #facebook a:hover::after {
+    left: 0;
+}
+
+
+#facebook a:hover i {
+    transition: 0.3s ease-in-out all;
+    color: white;
+}
