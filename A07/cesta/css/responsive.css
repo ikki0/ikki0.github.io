@@ -17,12 +17,35 @@
     #total p {
         left: 15px
     }
+
+    .card .informacion h3{
+        font-size: 15.5px !important;
+    }
+
+    .card .informacion p{
+        font-size: 15.5px !important;
+
+    }
+
+    * img {
+        width: 125px;
+    }
+
+    #pago {
+        top: -210px !important;
+    }
+
+    #total {
+        position: relative;
+        bottom: 9px;
+    }
 }
 
 @media screen  and (max-width: 1322px) {
     #pago {
         top: calc(-255px + 30px);
     }
+
 }
 
 @media screen  and (max-width: 1250px) {

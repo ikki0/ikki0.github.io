@@ -86,9 +86,10 @@ body{
 }
 
 .main #gif {
-    width: auto;
+    width: 21%;
+    height: auto;
     position: relative;
-    bottom: 40px;
+    bottom: 52px;
     border: none;
     display: flex;
     justify-content: center;
@@ -97,7 +98,8 @@ body{
 }
 
 #chaika {
-    width: 65%;
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
 }
