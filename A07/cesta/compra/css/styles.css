@@ -10,20 +10,19 @@
     --fuente_quinta: 'Fjalla One', sans-serif;
 } 
 * img {
-    display: block;
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
     /* la relacion de aspecto de un manga es muy cercana a 12/18 */
     aspect-ratio: 12/18;
-    width: 260px;
+    width: 315px;
     /* width: 225px;
     height: 400px; */
     /* esta propiedad sirve para que la imagen ocupe todo el espacio
       sin distorsionarse */
     object-fit: cover;
-    border: 1px solid black;
-    transition: 0.3s ease-in-out all;
-    cursor: pointer;
-
 }
+
 
 
 body{
@@ -59,6 +58,7 @@ body{
 }
 
 #header h1 {
+    text-align: center;
     text-transform: uppercase;
     font-family: var(--fuente_primaria);
     font-size: 40px;
@@ -71,7 +71,7 @@ body{
 }
 
 .wrap #content {
-    width: 50%;
+    width: 55%;
     /* background-color: red; */
 }
 
@@ -86,12 +86,19 @@ body{
 }
 
 .main #gif {
+    width: auto;
     position: relative;
     bottom: 40px;
     border: none;
+    display: flex;
+    justify-content: center;
+    justify-content: center ;
     
 }
 
-#chaika img {
-    border: none;
+#chaika {
+    width: 65%;
+    display: flex;
+    justify-content: center;
 }
+

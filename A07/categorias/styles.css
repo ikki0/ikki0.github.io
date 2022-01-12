@@ -10,7 +10,7 @@
   --fuente_quinta: "Fjalla One", sans-serif;
 }
 * img {
-  display: block;
+  max-width: 100%;
   /* la realcion de aspecto de un libro manga es muy cercana a
   12/18 */
   aspect-ratio: 12/18;
@@ -24,6 +24,7 @@
   transition: 0.3s ease-in-out all;
   margin-bottom: 20px;
   cursor: pointer;
+  
 }
 body {
   width: 100%;
@@ -133,7 +134,7 @@ body {
 
 .card a {
   height: 100%;
-  background-color: red;
+  
 }
 
 .informacion:hover h3, 

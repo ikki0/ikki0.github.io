@@ -10,7 +10,7 @@
     --fuente_quinta: 'Fjalla One', sans-serif;
 } 
 * img {
-    display: block;
+    max-width: 100%;
     /* la relacion de aspecto de un manga es muy cercana a 12/18 */
     aspect-ratio: 12/18;
     width: 260px;

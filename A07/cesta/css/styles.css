@@ -10,10 +10,10 @@
     --fuente_quinta: 'Fjalla One', sans-serif;
 } 
 * img {
-    display: block;
+    max-width: 100%;
     /* la relacion de aspecto de un manga es muy cercana a 12/18 */
     aspect-ratio: 12/18;
-    width: 140px;
+    width: 150px;
     /* width: 225px;
     height: 400px; */
     /* esta propiedad sirve para que la imagen ocupe todo el espacio
@@ -30,6 +30,8 @@ body{
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: var(--color_fondo);
@@ -106,6 +108,11 @@ body{
     align-items: center;
 }
 
+.card .enlace {
+    width: 100%;
+}
+
+
 .card.primero {
     grid-area: primero;
     align-self: start;
@@ -122,7 +129,7 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center; 
     row-gap: 5px;
 }
@@ -185,7 +192,7 @@ body{
 }
 
 #direccion #envio {
-    width: 60%;
+    width: 90%;
 }
 
 
@@ -212,7 +219,7 @@ body{
 }
 
 #direccion #envio input:nth-child(3) {
-    width: 91%;
+    width: calc(42% * 2 + 49px);
 }
 
 #pago {
