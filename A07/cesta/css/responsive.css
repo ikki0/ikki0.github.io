@@ -19,25 +19,25 @@
     }
 
     .card .informacion h3{
-        font-size: 15.5px !important;
+        font-size: 15.2px !important;
     }
 
     .card .informacion p{
-        font-size: 15.5px !important;
+        font-size: 15.2px !important;
 
     }
 
     * img {
-        width: 125px;
+        width: 115px;
     }
 
     #pago {
-        top: -210px !important;
+        top: -190px !important;
     }
 
     #total {
         position: relative;
-        bottom: 9px;
+        bottom: 5px;
     }
 }
 
