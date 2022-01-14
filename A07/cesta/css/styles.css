@@ -122,13 +122,19 @@ body{
 
 .card.primero {
     grid-area: primero;
+    height: 100%;
+    display: flex;
+    justify-self: center;
     align-self: start;
-    padding: 0px 0px 25px 0px;
 }
 
 .card.segundo {
     grid-area: segundo;
-    padding: 25px 0px 25px 0px;
+    display: flex;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    padding: 20px 0px 20px 0px;
 }
 
 .card .informacion {

@@ -27,12 +27,20 @@
 
     }
 
+    .card.segundo {
+        padding: 16px 0px 16px 0px;
+    }
+
     * img {
         width: 115px;
     }
 
+    #direccion {
+        row-gap: 18px;
+    }
+
     #pago {
-        top: -190px !important;
+        top: -158px !important;
     }
 
     #total {
