@@ -66,7 +66,7 @@ body {
 
 .main {
     margin: 0px auto;
-    width: 80vw;
+    width: 70vw;
     height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -77,9 +77,16 @@ body {
     width: 640px;
 }
 
-.main h1 {
+.main {
     font-size: 3em;
 }
+
+.info_content {
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 4rem;
+}
+
 
 .info_content .desarrollo {
     font-weight: bold;
@@ -92,12 +99,12 @@ body {
     
 }
 
-.download_cv {
+/* .download_cv {
     padding: 10px 25px;
     cursor: pointer;
     background-color: var(--color_letra_primero);
     border: none;
     border-radius: 20px;
     box-shadow: 1px 3px 11px -5px aqua;
-}
+} */
 
