@@ -1,0 +1,25 @@
+@media screen and (max-width: 1280px){
+    #principal h2{
+        margin-top: 0px;
+    }
+
+    #cards .card img {
+        width: 145px;
+    }
+}
+
+@media screen and (max-width: 1086px){
+    #categorias{
+        padding-left: 50px
+    }
+}
+
+@media screen and (max-width: 968px){
+    #categorias{
+        padding-left: 90px
+    }
+}
+
+/* @media screen and (max-width: 480px){
+
+} */

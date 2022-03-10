@@ -1,0 +1,23 @@
+#redes_sociales #twitter::after {
+    content:"";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: -90px;
+    top: 0;
+    border-bottom: 52px solid #00acee;
+    border-right: 52px solid transparent;
+    transition: 0.3s ease-in-out all;
+}
+
+#redes_sociales #twitter:hover::after {
+    left: 0;
+}
+
+#twitter svg{
+    transition: 0.4s ease-in-out all;
+}
+
+#twitter:hover a svg{
+    color: white;
+}

@@ -1,0 +1,33 @@
+.boton.seis {
+	background: none;
+	color: black;
+}
+
+.boton.seis svg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* Esto remarca la parte interior de un objeto (trazado) */
+	fill: none;
+}
+
+.boton.seis rect {
+	width: 100%;
+	height: 100%;
+	/* Esto remarca la parte exterior de un objeto (trazado)*/
+	stroke: black;
+	/* ancho del trazado */
+	stroke-width: 10px;
+	/* el trazado es en forma segmental */
+	stroke-dasharray: 1000;
+	/* el trazado cambia su valor original y se posiciona diferente */
+	stroke-dashoffset: 1000;
+	transition: 0.6s ease all;
+}
+
+.boton.seis:hover rect {
+	/* El trazado vuelve a su posicion original, donde se ve toda la linea */
+	stroke-dashoffset: 0;
+}

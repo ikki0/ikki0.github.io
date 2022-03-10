@@ -1,0 +1,110 @@
+:root {
+    --fuente_primero: 'Montserrat', sans-serif;
+    --fuente_segundo: 'Roboto', sans-serif;
+    --color_fondo_primero:  #5626f1;
+    --color_letra_primero: #18ffa7;
+    --color_letra_segundo:  #ffc422 ;
+}
+
+*img {
+    color: transparent;
+}
+
+/* colores interesantes:
+ #0052D4, #65C7F7, #9CECFB 
+ #ffc422 #fcc46a;;
+ #00dfc0
+ #4d2ed4  #5626f1;
+ */
+
+body {
+    font-family: var(--fuente_primero)
+}
+
+.info {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color_fondo_primero);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.titulo {
+    margin-top: -7px;
+    font-size: 50px;
+}
+
+.titulo span {
+    color: var(--color_letra_primero);
+}
+
+.menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu .active {
+    color: var(--color_letra_primero);
+}
+
+.menu a:hover {
+    background-color: rgb(0, 255, 242);
+    color: var(--color_fondo_primero);
+    transition: ease-in 0.4s;
+}
+
+.main {
+    margin: 0px auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.main img {
+    width: 640px;
+}
+
+.main {
+    font-size: 3em;
+}
+
+.info_content {
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 4rem;
+}
+
+
+.info_content .desarrollo {
+    font-weight: bold;
+    color:   #ffc422;
+    font-style: normal;
+}
+
+.nombre {
+    color: var(--color_letra_primero);
+    
+}
+
+/* .download_cv {
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: var(--color_letra_primero);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 3px 11px -5px aqua;
+} */
+

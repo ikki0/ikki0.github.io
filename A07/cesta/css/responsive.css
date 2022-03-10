@@ -1,0 +1,68 @@
+@media screen and (max-width: 1890px) {
+    #total p {
+        position: relative;
+        bottom: 20px;
+        left: 10px
+    }
+}
+
+@media screen and (max-width: 1724px){
+    .card.primero .informacion h3 {
+        padding-left: 30px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1610px) {
+    #total p {
+        left: 15px
+    }
+
+    .card .informacion h3{
+        font-size: 15.2px !important;
+    }
+
+    .card .informacion p{
+        font-size: 15.2px !important;
+
+    }
+
+    .card.segundo {
+        padding: 16px 0px 16px 0px;
+    }
+
+    * img {
+        width: 115px;
+    }
+
+    #direccion {
+        row-gap: 18px;
+    }
+
+    #pago {
+        top: -158px !important;
+    }
+
+    #total {
+        position: relative;
+        bottom: 5px;
+    }
+}
+
+@media screen  and (max-width: 1322px) {
+    #pago {
+        top: calc(-255px + 30px);
+    }
+
+}
+
+@media screen  and (max-width: 1250px) {
+    #pago {
+        top: -497px !important;
+        left: 320px;
+    }
+
+    #direccion #envio input:nth-child(3){
+        width: 42%;
+    }
+}

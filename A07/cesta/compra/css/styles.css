@@ -1,0 +1,106 @@
+:root {
+    --color_primario: #EB5E28;
+    --color_secundario: #FFFCF2;
+    --color_fondo: #CCC5B9;
+    --color_letra: #403D39;
+    --fuente_primaria: 'Roboto', sans-serif;
+    --fuente_secundaria: 'Oswald', sans-serif;
+    --fuente_terciaria: 'Indie Flower', cursive;
+    --fuente_cuarta: 'nevis', sans-serif;
+    --fuente_quinta: 'Fjalla One', sans-serif;
+} 
+* img {
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
+    /* la relacion de aspecto de un manga es muy cercana a 12/18 */
+    aspect-ratio: 12/18;
+    width: 315px;
+    /* width: 225px;
+    height: 400px; */
+    /* esta propiedad sirve para que la imagen ocupe todo el espacio
+      sin distorsionarse */
+    object-fit: cover;
+}
+
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color_fondo);
+}
+
+.main {
+    width: 90%;
+    height: 93%;
+    background-color: var(--color_secundario);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrap {
+    width: 65%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 90px;
+    position: relative;
+    /* background-color: blue; */
+}
+
+#header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--fuente_primaria);
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    /* Para hacer un degradado de color arco iris*/
+    background: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.wrap #content {
+    width: 55%;
+    /* background-color: red; */
+}
+
+.wrap #content p{
+    font-family: var(--fuente_primaria);
+    font-size: 22px;
+    color: var(--color_letra);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main #gif {
+    width: 21%;
+    height: auto;
+    position: relative;
+    bottom: 52px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    justify-content: center ;
+    
+}
+
+#chaika {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
