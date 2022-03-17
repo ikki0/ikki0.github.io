@@ -15,17 +15,23 @@
  #ffc422 #fcc46a;;
  #00dfc0
  #4d2ed4  #5626f1;
- */
+ #5b29ff;
+ #421dbe
+ 
+ background2pagina: 
+ rgb(255,255,255,0.50);
+ rgb(255,255,255,0.90);
+ #f4f7ff*/
 
 body {
-    font-family: var(--fuente_primero)
+    font-family: var(--fuente_primero);
+    color: white;
 }
 
 .info {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: var(--color_fondo_primero);
-    color: white;
 }
 
 .navbar {
@@ -79,6 +85,7 @@ body {
 
 .main {
     font-size: 3em;
+    font-weight: 500;
 }
 
 .info_content {
@@ -90,16 +97,49 @@ body {
 
 .info_content .desarrollo {
     font-weight: bold;
-    color:   #ffc422;
+    color: var(--color_letra_segundo);
     font-style: normal;
 }
 
 .nombre {
     color: var(--color_letra_primero);
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.sobre_mi {
+    margin: 0px auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.sobre_mi img {
+    /* quiza cambiar el circulo de la imagen por un pentagono o asi */
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
     
 }
 
-/* .download_cv {
+/* .about {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100vw;
+}
+
+.download_cv {
     padding: 10px 25px;
     cursor: pointer;
     background-color: var(--color_letra_primero);

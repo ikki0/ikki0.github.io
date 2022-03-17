@@ -5,7 +5,7 @@
 const typed = new Typed('.typed', {
     strings: [
         '<i class="desarrollo">Desarollar Sitios Web</i>',
-        '<i class="desarrollo">Diseñar Sitios Web</i>',
+        // '<i class="desarrollo">Diseñar Sitios Web</i>',
         '<i class="desarrollo">Trabajar en Equipo</i>',
         '<i class="desarrollo">Aprender Nuevas Cosas</i>',
         
