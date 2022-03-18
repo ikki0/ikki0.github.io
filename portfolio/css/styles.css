@@ -133,6 +133,33 @@ body {
     
 }
 
+.presentacion {
+    position: relative;
+    background-color: white;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.presentacion h2 {
+
+}
+
+.presentacion::after {
+    content: ' ';
+    position: absolute;
+    /* coordenadas iniciales */
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to right, #ad5389, #3c1053); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    z-index: -1;
+}
+
 /* .about {
     display: grid;
     grid-template-columns: repeat(2,1fr);
