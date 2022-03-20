@@ -163,7 +163,7 @@ body {
     font-size: 1.1rem;
     row-gap: 1.2rem;
     text-align: justify;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
     background-color: white;
     background: linear-gradient(white, white) padding-box,
     linear-gradient(90deg,darkblue, darkorchid) border-box;
