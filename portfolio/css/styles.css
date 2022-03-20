@@ -33,6 +33,7 @@ body {
 
 .hexagono {
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    
 }
 
 .info,
@@ -162,23 +163,27 @@ body {
     font-size: 1.1rem;
     row-gap: 1rem;
     text-align: justify;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     background-color: white;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg,darkblue, darkorchid) border-box;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 
-.presentacion::after {
+
+/* .presentacion::after {
     content: ' ';
-    position: absolute;
+    position: absolute; */
     /* coordenadas iniciales */
-    bottom: 0px;
+    /* bottom: 0px;
     left: 0px;
-    background: linear-gradient(to right, #ad5389, #3c1053); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 100%;
     height: 100%;
     filter: blur(13px);
     z-index: -1;
-}
+} */
 
 
 .download_cv {
