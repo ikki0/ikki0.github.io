@@ -200,7 +200,10 @@ body {
     height: 80vh;
     margin: 0px auto;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2.2rem;
 }
 
 .card {
@@ -209,6 +212,7 @@ body {
     background-color: var(--color_letra_segundo);
     border-radius: 10px;
     color: black;
+
 }
 
 .card_img {
@@ -218,6 +222,11 @@ body {
     background-size: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.card_img.segundo {
+    background: url("../img/botonesAnimados.png");
+    background-size: cover;
 }
 
 .card_title {
