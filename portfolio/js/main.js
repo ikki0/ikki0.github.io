@@ -22,3 +22,21 @@ const typed = new Typed('.typed', {
     //cursorChar: '|' , muestra dicho caracter como cursor
     //contentType: 'html' , html o null es el tipo de texto 
 });
+
+
+const menu = document.getElementsByClassName('menu');
+const secciones = document.querySelectorAll('.seccion');
+
+let indexSeccionActiva;
+//Observer
+const observer = new IntersectionObserver((entradas, observer) => {
+    entradas.forEach(entrada => {
+        if(entrada.isIntersecting) {
+            indexSecionActiva = [...secciones].indexOf(entrada.target);
+
+        }
+    });
+});
+
+//Asignacion de observador a cada seccion
+secciones.forEach(seccion => observer.observe(seccion));
