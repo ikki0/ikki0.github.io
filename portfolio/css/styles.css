@@ -229,6 +229,11 @@ body {
     background-size: cover;
 }
 
+.card_img.tercero {
+    background: url("../img/bookWebsite.png");
+    background-size: cover;
+}
+
 .card_title {
     padding: 1.2rem;
     display: flex;
