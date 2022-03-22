@@ -43,7 +43,7 @@ body {
     height: 100vh; 
     background-color: var(--color_fondo_primero);
     color: var(--color_letra_tercero);
-    overflow-y: scroll;
+    
 }
 
 
@@ -234,6 +234,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    overflow-y: scroll;
     gap: 2.2rem;
 }
 
