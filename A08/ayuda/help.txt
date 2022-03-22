@@ -1,0 +1,24 @@
+on readability: https://kickpoint.ca/the-readability-formula-making-your-website-easy-to-read/
+
+CSS units: https://www.w3schools.com/cssref/css_units.asp
+(use rem and ch to make your life easier)
+
+
+shape outside images: https://css-tricks.com/almanac/properties/s/shape-outside/
+
+
+
+you can use this to import fonts: https://developers.google.com/fonts/docs/css2
+
+
+Interesting fonts from google: https://fonts.google.com/
+
+Fleur De Leah is a formal script with a floral flavour. One of the first fonts to incorporate embellishment design elements within the letterforms.
+Use it sparingly for captions and short phrases and as with any script font, but never use it in all caps.
+
+Spectral is a new and versatile serif face available in seven weights of roman and italic, with small caps. Spectral offers an efficient, beautiful design that’s intended primarily for text-rich, screen-first environments and long-form reading.
+
+Nautigal is Inspired by the hand lettering design for a friend’s yacht, this contemporary script style, The Nautigal is fluid yet formal with beautiful connectors.
+
+
+Look for other fonts with nice CAPS for first letter of the text.
