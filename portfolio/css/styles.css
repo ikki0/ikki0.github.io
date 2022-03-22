@@ -40,9 +40,10 @@ body {
 .portfolio,
 .wrap {
     width: 100%;
-    height: 100vh;
+    height: 100vh !important; 
     background-color: var(--color_fondo_primero);
     color: var(--color_letra_tercero);
+    overflow-y: scroll;
 }
 
 
