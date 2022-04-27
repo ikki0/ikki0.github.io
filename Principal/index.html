@@ -1,112 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Fuente Letras Goole -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS normalizacion -->
-    <link rel="stylesheet" href="./portfolio/css/normalize.css">
-
-    <!-- estilos -->
-    <link rel="stylesheet" href="./portfolio/css/styles.css">
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Red+Hat+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- Normalización DNS -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- Estilos CSSx -->
+    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
-    <div class="info seccion" id="1">
-        <header>
-            <nav class="navbar">
-                <div class="titulo">
-                    <!-- anadir icono <> -->
-                    <h2>A<span>R</span</h2>
-                </div>
+    <header id="pageHeader">
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
 
-                <ul class="menu">
-                    <li><a class="active" href="#1">Inicio</a></li>
-                    <li><a href="#2">Acerca de Mí</a></li>
-                    <li><a href="#3">Mis Proyectos</a></li>
-                    <!-- <li><a href="#4">Contacto </a></li> -->
-                </ul>
-            </nav>
-        </header>
+                <li>
+                    <a href="#">Exercicis</a>
+                </li>
 
-        <div class="main">
-            <div class="info_content">
-                <h1>¡Hola! Soy
-                    <span class="nombre">Alan Rojas</span>
-                    <br>
-                    y me gusta
-                    <br>
-                    <span class="typed"></span>
-                </h1>
+                <li>
+                    <a href="#">Projecte</a>
+                </li>
 
-                <!-- <a href="./portfolio/curriculum/Rojas_Alan_DAW.pdf"  download ="Rojas_Alan_CV.pdf">
-                    <button class="download_cv">
-                        <span>Decargar CV</span>
-                    </button>
-                </a> -->
-            </div>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+        </nav>
 
-            <img src="./portfolio/img/figura2.png" alt="figura">
+        <div class="title">
+            <span class="primero">DAW1-Homepage</span>
+            <span class="segundo">UF2</span>
         </div>
-    </div>
+    </header>
 
-    <div class="wrap seccion" id="2">
-        <div class="portfolio_titulo">
-            <h2>Acerca de Mí</h2>
-            <!-- <div class="subrayado"></div> -->
-        </div>
-
-        <div class="sobre_mi">
-            <div class="imagen">
-                <img class="hexagono" src="./portfolio/img/miFoto.jpg" alt="foto_CV">
-            </div>
-
-            <div class="presentacion">
-                <!-- anadir emote -->
-                <p>
-                    Me llamo Alan Kevin Rojas Alvarez,
-                    soy estudiante de Desarrollo de Aplicaciones Web. Mis pasatiempos son la música y séries. Mis
-                    intereses son conocer más sobre el frontend
+    <article id="mainArticle">
+        <h2>Exercicis</h2>
+        <div class="cards">
+            <div class="card primero">
+                <div class="card_img primero"></div>
+                <h2>Activitat 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
-
-                <P>
-                    Sería un placer poder formar parte de tu proyecto y poder crecer profesionalmente
-                </P>
-
-                <a href="./portfolio/curriculum/Rojas_Alan_DAW.pdf" download="Rojas_Alan_CV.pdf">
-                    <button class="download_cv">
-                        <span>Decargar CV</span>
-                    </button>
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="portfolio seccion" id="3">
-        <div class="portfolio_titulo">
-            <h2>Mis Proyectos</h2>
-            <!-- <div class="subrayado"></div> -->
-        </div>
-
-        <div class="container">
-            <div class="card">
-                <div class="card_img"></div>
-                <div class="card_title">
-                    <h2>Manga Website</h2>
-                </div>
-                <p>Este proyecto es una página web para la venta de mangas</p>
                 <div class="card_projects_links">
-                    <a href="https://github.com/ikki0/ikki0.github.io/tree/main/A07" target="_blanck">
+                    <a href="#" target="_blanck">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">
                             <path
@@ -114,7 +63,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://ikki0.github.io/A07/" target="_blank">
+                    <a href="#" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-globe" viewBox="0 0 16 16">
                             <path
@@ -124,14 +73,12 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card segundo">
                 <div class="card_img segundo"></div>
-                <div class="card_title">
-                    <h2>Botones Animados</h2>
-                </div>
-                <p>Práctica de botones animados mediante transiciones</p>
+                <h2>Activitat 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea</p>
                 <div class="card_projects_links">
-                    <a href="https://github.com/ikki0/ikki0.github.io/tree/main/botones_animados" target="_blanck">
+                    <a href="#" target="_blanck">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">
                             <path
@@ -139,7 +86,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://ikki0.github.io/botones_animados/" target="_blank">
+                    <a href="#" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-globe" viewBox="0 0 16 16">
                             <path
@@ -148,15 +95,14 @@
                     </a>
                 </div>
             </div>
+            
 
-            <div class="card">
+            <div class="card tercero">
                 <div class="card_img tercero"></div>
-                <div class="card_title">
-                    <h2>Book Website</h2>
-                </div>
-                <p>Este proyecto muestra un diseño agradable para la lectura de libros</p>
+                <h2>Activitat 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea</p>
                 <div class="card_projects_links">
-                    <a href="https://github.com/ikki0/ikki0.github.io/tree/main/A08" target="_blanck">
+                    <a href="# target="_blanck">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">
                             <path
@@ -164,7 +110,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://ikki0.github.io/A08/" target="_blank">
+                    <a href="#" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-globe" viewBox="0 0 16 16">
                             <path
@@ -174,14 +120,12 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card cuarto">
                 <div class="card_img cuarto"></div>
-                <div class="card_title">
-                    <h2>Artículos Website</h2>
-                </div>
-                <p>Este proyecto muestra las distintas secciones de cada artículo</p>
+                <h2>Activitat 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea</p>
                 <div class="card_projects_links">
-                    <a href="https://github.com/ikki0/ikki0.github.io/tree/main/maquetacion-2" target="_blanck">
+                    <a href="#" target="_blanck">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">
                             <path
@@ -189,7 +133,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://ikki0.github.io/maquetacion-2/" target="_blank">
+                    <a href="#" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-globe" viewBox="0 0 16 16">
                             <path
@@ -199,25 +143,11 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="contact section">
-        <div class="portfolio_titulo">
-            <h2>Contacto</h2> 
-        </div>
-
-        <div class="contact_links">
-            <a href="mailto:arojas1297@gmail.com">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                </svg> 
-            </a>
-                
-        </div>
-    </div> 
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="./portfolio/js/main.js"></script>
+    </article>
+    <footer id="pageFooter">
+        <span>Alan Rojas</span>
+        <span>&copy; Todos los derechos reservados<span>
+    </footer>
 </body>
 
 </html>
