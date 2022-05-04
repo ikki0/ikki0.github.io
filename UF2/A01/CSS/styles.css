@@ -1,0 +1,88 @@
+:root{
+    --fuente_akshar: 'Akshar', sans-serif;
+    --fuente_montserrat: 'Montserrat', sans-serif;
+    --fuente_opensSans: 'Open Sans', sans-serif;
+    --fuente_roboto: 'Roboto', sans-serif;
+
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/fondo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+img {
+    aspect-ratio: 5 / 3 ;
+    width: 100%;
+    border: 2px solid rgb(255, 237, 237);
+    background-color: red;
+    cursor: pointer;
+}
+
+.card_img img:hover {
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Este es el div que se mostrará cuando el usuario de click a una imagen y luego con JS pasará de display none a display flex; */
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.full-img img{
+    width: 90%;
+    max-width: 600px;
+}
+header {
+    padding: 3rem;
+    height: 20vh;
+}
+
+h1 {
+    font-family: var(--fuente_opensSans);
+    font-weight: bold;
+    font-size: 300%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+
+
+.cards{
+    height: auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px , 1fr));
+    grid-template-rows: auto;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    justify-content: center;
+    align-content: center;
+}

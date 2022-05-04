@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=q, initial-scale=1.0" />
+    <title>A01</title>
+    <!-- *Fuente de letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./CSS/normalize.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/responsive.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Galería de Imagenes</h1>
+    </header>
+
+    <main>
+        <div class="full-img" id="fullImgBox">
+            <img src="./img/León-2.jpg" id="fullImg" alt="imagen de león">
+            <!-- este atritubo onclick incorporá la funcion closeImg() -->
+            <span onclick="closeImg()">X</span>
+        </div>
+
+        <div class="cards">
+            <div class="card_img primero">
+                <!-- este atributo onclick incorporá la función openFullImg y le pasa como argumento esta imagen -->
+                <img src="./img/León-2.jpg"                onclick="openFullImg(this.src)" alt="imagen de león">
+            </div>
+
+            <div class="card_img segundo">
+                <img src="./img/tiburon.jpg" onclick="openFullImg(this.src)" alt="imagen de tiburon">
+            </div>
+
+            <div class="card_img tercero">
+                <img src="./img/cocodrilo.jpeg" onclick="openFullImg(this.src)" alt="imagen de cocodrilo">
+            </div>
+
+            <div class="card_img cuarto">
+                <img src="./img/cabra.jpg" onclick="openFullImg(this.src)" alt="imagen de cabra">
+            </div>
+        </div>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
