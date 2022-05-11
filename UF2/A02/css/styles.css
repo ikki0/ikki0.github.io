@@ -5,11 +5,8 @@
     --montserrat: 'Montserrat', sans-serif;
 }
 
-/* Colores degradados interesantes:
-background: #373B44;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: #8E2DE2;  /* fallback for old browsers */
+
+/* colores interesantes */
 background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -179,16 +176,16 @@ footer {
     /* propiedad necesario para que funcione en distintos navegadores */
     background-image: -o-linear-gradient(45deg, #0006ff, #a801ff);
     background-image: linear-gradient(45deg, #0006ff, #a801ff);
+    background-image: webkit-linear-gradient(45deg, #0006ff, #a801ff);
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-items: center;
-
+    background-color: red;
 }
 
 .header {
     padding: 2.8rem;
     /* font-size: 2.5rem; */
-   
     font-weight: bold;
     color: #fff;
     font-family: var(--montserrat);
@@ -203,13 +200,14 @@ footer {
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 78%;
+    max-height: 78%;
     row-gap: 2rem;
+    overflow: hidden;
 }
 
 .cards {
+    max-height: 25%;
     width: 100%;
-    height: 25%;
     display: flex;
     align-items: center;
     border-radius: 1rem;
