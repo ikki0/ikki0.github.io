@@ -1,0 +1,33 @@
+@media (max-width: 700px) {
+
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+    }
+
+    .image {
+        height: 80%;
+        width: 100%;
+    }
+
+    .music {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 411px){
+    .header h2 {
+        text-align: center;
+        /* text-transform: capitalize; */
+    }
+
+    .wrap {
+
+        background-size: 35rem 100%;
+        background-position: 53%; 
+    }
+}
