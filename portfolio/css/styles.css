@@ -25,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
  
 body {
@@ -33,7 +34,6 @@ body {
 
 .hexagono {
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    
 }
 
 .info,
@@ -48,7 +48,7 @@ body {
 
 .contact {
     width: 100%;
-    min-height: 30vh;
+    height: 30vh;
     background-color: var(--color_fondo_primero);
     color: var(--color_letra_tercero);
 }
@@ -64,6 +64,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2em;
+}
+
+.nav_label,
+.nav_input {
+    display: none;
 }
 
 .titulo {
@@ -84,17 +89,35 @@ body {
 .menu a {
     color: var(--color_letra_tercero);
     padding: 10px 20px;
+    display: block;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.menu a::after{
+    content: "";
+    display: block;
+    background-color: var(--color_letra_primero);
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path 0.3s;
+}
+
+.menu a:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .menu .active {
     color: var(--color_letra_primero);
 }
 
-.menu a:hover {
+/* .menu a:hover {
     background-color: var(--colot_letra_hover);
     color: var(--color_fondo_primero);
     transition: ease-in 0.4s;
-}
+} */
+
 
 .main {
     margin: 0px auto;
