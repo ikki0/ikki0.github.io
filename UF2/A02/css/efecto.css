@@ -1,0 +1,19 @@
+/* La animacion sera izquierda a derecha */
+.efecto:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    background: rgb(255, 217, 0); 
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.36s ease-in-out;
+}  
+
+.efecto:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

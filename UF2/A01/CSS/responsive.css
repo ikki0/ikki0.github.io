@@ -1,0 +1,17 @@
+@media screen and (max-width: 846px) {
+    .card_img img:hover {
+        transform: scale(1.1);
+        overflow: hidden;
+    }
+
+    .card_img {
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 579px) {
+    header{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
