@@ -13,8 +13,8 @@ const soundLoser = new Audio("../audio/loser.mp3");
 const infoWrite = document.querySelector('.infoWrite');
 
 
-soundWinner.volume = 0.3;
-soundLoser.volume = 0.3;
+soundWinner.volume = 0.4;
+soundLoser.volume = 0.4;
 // Letras abecedario
 const abecedario = "abcdefghijklmnñopqrstuvwxyz";
 let palabra;
@@ -59,11 +59,11 @@ function activarBotones() {
   // Modo de juego con teclado
   document.addEventListener('keydown', (event) => {
     // El usuario no puede presionar una tecla fuera del abecedario
-    if (!abecedario.includes(event.key)) {
+    if (!abecedario.includes(event.key.toLowerCase())) {
       return;
     }
 
-    letra = event.key;
+    letra = event.key.toLowerCase();
 
     if (juegoActivo) {
       analizaJuego(letra);
@@ -203,6 +203,8 @@ function nuevaPartida() {
 
   // Aquí creamos una variable para la palabra que se tenga que adivinar
   palabra = prompt(`Escriba una palabra`, '');
+
+  if (palabra !== null) palabra = palabra.toLowerCase();
 
   // Si la palabra es null porque le dio a cancelar, fin del juego
   if (palabra === null) {
