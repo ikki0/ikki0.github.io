@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./img/pikachu.png" />
+    <title>Proyecto Pokémon</title>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <picture>
+        <img src="./img/pokemon_letter.png" alt="imagen logo pokemon" />
+      </picture>
+    </header>
+
+    <main>
+      <section class="fist_section"></section>
+      <nav class="botones">
+        <button type="submit" class="boton" onclick="reiniciar()">
+          Reiniciar Página
+        </button>
+        <button class="boton" onclick="calcMitjana()">Calcular Media</button>
+        <button class="boton grafico" onclick="mostrarGrafico()">
+          Mostrar Gráfica
+        </button>
+        <div class="boton">
+          <label for="adad">Buscar Pokemon: </label>
+          <input type="text" value="" id="txtSearch" />
+        </div>
+      </nav>
+
+      <div id="resultat"></div>
+
+      <div class="grafica hidden">
+        <div class="chart-container" style="position: relative; width: 700px">
+          <span class="cerrar">x</span>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
