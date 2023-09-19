@@ -1,13 +1,21 @@
-// Variables
+// Variables de html
 const botonCerrar = document.querySelector(".cerrar");
 const ventanaGrafica = document.querySelector(".grafica");
-const inputBuscar = document.querySelector("#txtSearch");
+const inputBuscar = document.querySelector("#findPokemon");
+const container_skeleton = document.querySelector(".container-skeleton");
+const dModalBox = document.querySelector('.modal-box');
+const pModalText = document.querySelector('.modal-text');
 
 let thNombre;
 let contadorNombre = 0;
 let contadorId = 0;
 let contadorPeso = 0;
 let arrayObjetos;
+let contadorImagenes = 0;
+let body = document.querySelector("body");
+
+// Inicialmente no se podra mover la barra de scroll
+body.style.overflow = "hidden";
 
 // Funciones
 
@@ -32,7 +40,11 @@ const calcMitjana = function () {
     sumarPeso += valor;
   }
   const calcularMediaPeso = (sumarPeso / longitudPeso).toFixed(2);
-  alert(`El peso medio de todos los pokemon es: ${calcularMediaPeso} kg`);
+
+  // Escribimos el peso medio de todos los pomemon en pModalText
+
+  pModalText.textContent = `El peso medio de todos los pokemon es ... ${calcularMediaPeso} kg 🧐`;
+  dModalBox.classList.remove('hidden');
 };
 
 // Funcion para crear la tabla
@@ -83,6 +95,9 @@ const printList = function (arrayObjetos) {
     let celdaPeso = document.createElement("td");
     let imagen = document.createElement("img");
 
+    //agregar clase a la imagen
+    imagen.classList.add('imagen-pokemon');
+
     // Agregamos la propiedad a la imagen
     imagen.src = pokemon.img;
 
@@ -105,6 +120,17 @@ const printList = function (arrayObjetos) {
 
     // Fila añadido al final de la parte body de la tabla
     tablaBody.appendChild(fila);
+
+    // agregar funcion load a la imagen
+
+    imagen.addEventListener('load', function () {
+      contadorImagenes++;
+
+      if (contadorImagenes === 6) {
+        body.style.overflow = "auto";
+        container_skeleton.classList.add('hidden');
+      }
+    });
   });
 
   // Crear una clase para tabla
@@ -167,6 +193,8 @@ const printList = function (arrayObjetos) {
     contadorPeso++;
     modificaImprimir(arrayObjetos);
   });
+  // tabla_skeleton.innerHTML = "";
+
 };
 
 // Crear array multidimensional con id, nombre, imagen y peso de los pokemon
@@ -354,6 +382,10 @@ function convertirArrayMultidimensional() {
   return arrayObjetos;
 }
 
+function closeModal() {
+  dModalBox.classList.add('hidden');
+}
+
 fetch("./json/pokemon.json")
   .then(response => response.json())
   .then(data => {
@@ -375,5 +407,4 @@ fetch("./json/pokemon.json")
       arrayColores,
       arrayBorderColor
     );
-    // Pregunta 4 convertir array multidimensional en araray Objectos
   });
