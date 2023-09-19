@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="./img/pikachu.png" />
+    <link rel="stylesheet" href="./css/botones.css" />
     <title>Proyecto Pokémon</title>
     <script
       defer
@@ -13,33 +14,189 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
+    <!--  skeleton -->
+    <div class="container-skeleton">
+      <section class="container">
+        <div class="container-find">
+          <div class="skeleton skeleton-find"></div>
+        </div>
+
+        <nav class="botones">
+          <div class="skeleton skeleton-button"></div>
+          <div class="skeleton skeleton-button"></div>
+          <div class="skeleton skeleton-button"></div>
+        </nav>
+      </section>
+
+      <table class="tabla table-skeleton">
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-img"></div>
+          </td>
+          <td>
+            <div class="skeleton skeleton-text"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- fin skeleton -->
     <header>
       <picture>
         <img src="./img/pokemon_letter.png" alt="imagen logo pokemon" />
       </picture>
+
+      <section class="container">
+        <div class="container-find">
+          <input type="text" id="findPokemon" required />
+          <label for="findPokemon">
+            <span>Buscar Pokemon</span>
+          </label>
+          <img
+            id="detective-pikachu"
+            src="./img/detective_pikachu.png"
+            alt="imagen detective pikachu"
+          />
+        </div>
+
+        <nav class="botones">
+          <button type="submit" class="boton uno" onclick="reiniciar()">
+            <span> Reiniciar Página </span>
+          </button>
+          <button class="boton dos" onclick="calcMitjana()">
+            <span> Calcular Media </span>
+          </button>
+          <!-- ventana modal para mostrar la Media de peso -->
+          <div class="modal-box hidden">
+            <div class="modal-content">
+              <span class="modal-close" onclick="closeModal()">&times;</span>
+              <h2>Cálculo Peso Medio Pokémon 🤔</h2>
+              <p class="modal-text"></p>
+            </div>
+          </div>
+
+          <button class="boton tres grafico" onclick="mostrarGrafico()">
+            <span> Mostrar Gráfica </span>
+          </button>
+        </nav>
+      </section>
     </header>
 
     <main>
-      <section class="fist_section"></section>
-      <nav class="botones">
-        <button type="submit" class="boton" onclick="reiniciar()">
-          Reiniciar Página
-        </button>
-        <button class="boton" onclick="calcMitjana()">Calcular Media</button>
-        <button class="boton grafico" onclick="mostrarGrafico()">
-          Mostrar Gráfica
-        </button>
-        <div class="boton">
-          <label for="adad">Buscar Pokemon: </label>
-          <input type="text" value="" id="txtSearch" />
-        </div>
-      </nav>
-
       <div id="resultat"></div>
-
       <div class="grafica hidden">
         <div class="chart-container" style="position: relative; width: 700px">
           <span class="cerrar">x</span>
+          <h2>Tipos Pokémon</h2>
           <canvas id="myChart"></canvas>
         </div>
       </div>
