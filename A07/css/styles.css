@@ -1,45 +1,28 @@
-/* colores
-#EB5E28(banners, botons) - Principal; energia, equilibri, amistad.
-#FFFCF2(fons del contingut) - Secundari
-#CCC5B9(fons de pàgina) - Secundari
-#403D39(lletres) - Terciari.
-*/
-
-/* !Elementos pensados: 
-1. Habilitar el modo oscuro
-2. Hacer sombreados en el form y pensar mas estilos para ello
-3. Utilizar grandiantes para el header u otra cosa
-4. Imagenes con alguna transicion
-5. que las CARDS tengan una ligera animacion con grad , para girar un poquito
-6. Utilizar las variables CSS  */
-
 /* para autocompletar en VC utilizar ctrl izq + espacio */
-
 /* accedemos a la raiz del documento para declarar variables */
 :root {
-    --color_primario: #EB5E28;
-    --color_secundario: #FFFCF2;
-    --color_fondo: #CCC5B9;
-    --color_letra: #403D39;
-    --fuente_primaria: 'Roboto', sans-serif;
-    --fuente_secundaria: 'Oswald', sans-serif;
-    --fuente_terciaria: 'Indie Flower', cursive;
-    --fuente_cuarta: 'nevis', sans-serif;
-    --fuente_quinta: 'Fjalla One', sans-serif;
-} 
-
-body{
-    height: 100vh ;
-    display: flex;
-    flex-direction: column;
-    /* overflow: hidden; */
+    --color_primario: #eb5e28;
+    --color_secundario: #fffcf2;
+    --color_fondo: #ccc5b9;
+    --color_letra: #403d39;
+    --fuente_primaria: "Roboto", sans-serif;
+    --fuente_secundaria: "Oswald", sans-serif;
+    --fuente_terciaria: "Indie Flower", cursive;
+    --fuente_cuarta: "nevis", sans-serif;
+    --fuente_quinta: "Fjalla One", sans-serif;
 }
 
-header  {
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
     width: 100%;
     height: 110px;
     display: flex;
-    align-items: center;    
+    align-items: center;
     position: relative;
     background-color: var(--color_secundario);
 }
@@ -52,14 +35,12 @@ header #logo {
 }
 
 header #logo img {
-    /* el ancho de la imagen es la que viene por defecto */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-#info{
+#info {
     width: 100%;
     height: 80px;
     position: relative;
@@ -71,14 +52,12 @@ header #logo img {
 }
 
 #info #search {
-    width: 250px;
+    width: 280px;
     position: absolute;
     left: 160px;
 }
 
 #info #search form {
-    width: 100%;
-    height: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -87,11 +66,12 @@ header #logo img {
 #info #search form input {
     width: 100%;
     height: 35px;
-    position: relative;
-    padding-left: 40px;
+    padding: 18px 40px;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-#info #search form input::placeholder{
+#info #search form input::placeholder {
     position: relative;
     left: 40px;
     font-weight: 550;
@@ -104,14 +84,12 @@ header #logo img {
     width: 42px;
     height: 35px;
     position: absolute;
-    top: 0px;
+    top: 4px;
     left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-
 
 #info #search svg {
     width: auto;
@@ -120,31 +98,14 @@ header #logo img {
     color: orange;
     stroke: orange;
     stroke-width: 0.5px;
-
 }
-
-/* #info #search form:focus input::placeholder svg { */
-    /* A diferencia de opcity 0, display none es como si el elemento
-    no exisitese y por tanto no interaciona con la resta de elementos */
-    /* display: none; */
-    /* opacity: 0; */
-/* }  */
 
 #categorias {
     height: 100%;
-    width: auto;
     position: absolute;
     left: calc(100% - 600px);
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-
-}
-
-#info #menu{
-    width: auto;
-    height: auto;
-
 }
 
 #menu ul {
@@ -152,20 +113,41 @@ header #logo img {
     gap: 10px;
 }
 
-#info #menu  li a{
+#info #menu li a {
     color: white;
-    /* text-decoration: none; */
     font-family: var(--fuente_primaria);
-    font-size: 25px;
+    font-size: 1.6rem;
     font-weight: 400;
     text-transform: uppercase;
-    border-right: 1px solid white;
-    padding-right: 10px;
+    border-right: 2px solid black;
+    padding: 5px 0;
+    transition: 0.2s;
+    padding: 10px;
+    position: relative;
+    display: block;
 }
 
-#info #menu li a:hover {
-    color: crimson;
+#info #menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Coloca el borde en la parte inferior */
+    left: 0;
+    width: 100%; /* Ancho completo del elemento a */
+    height: 2px; /* Altura del borde inferior */
+    background-color: red;
+    transform: scaleX(0); /* Inicialmente, el borde estará oculto */
+    transform-origin: left center;
+    transition: transform 0.2s ease; /* Agrega una transición suave */
 }
+
+#info #menu li a:hover::after {
+    transform: scaleX(1); /* Muestra el borde al hacer hover */
+}
+
+/* #info #menu li a:hover {
+    border-bottom: 2px solid crimson;
+    padding: 0 5px;
+} */
 
 #compra img {
     width: 70px;
@@ -178,7 +160,6 @@ header #logo img {
 #compra a:hover img {
     transform: rotate(3deg);
     filter: drop-shadow(0 0 0.4rem gold);
-
 }
 
 #main {
@@ -199,8 +180,6 @@ header #logo img {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
 
 #principal {
@@ -210,24 +189,34 @@ header #logo img {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+    row-gap: 0.8rem;
 }
 
 #principal h2 {
-    color: black;
     text-transform: uppercase;
     font-family: var(--fuente_primaria);
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
     margin-top: 20px;
     /* Para hacer un degradado de color arco iris*/
-    background: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+    background: repeating-linear-gradient(
+        to right,
+        #c4e17f 50px,
+        #f7fdca 50px,
+        #fad071 50px,
+        #f0766b,
+        #db9dbe,
+        #c49cdf,
+        #6599e2,
+        #61c2e4
+    );
     -webkit-background-clip: text;
-    color: transparent;  
+    background-clip: text;
+    color: transparent;
     letter-spacing: 0.05em;
 }
 
-#cards{
+#cards {
     width: 100%;
     height: 100%;
     display: grid;
@@ -236,16 +225,22 @@ header #logo img {
     justify-items: center;
     align-items: center;
     grid-auto-flow: row;
-    grid-template-areas: 
-    "primero segundo tercero cuarto";
+    grid-template-areas: "primero segundo tercero cuarto";
 }
 
-#cards .card img{
-    max-width: 100%;
-    aspect-ratio: 12/18;
-    width: 176px;
-    /* esta propiedad sirve para que la imagen ocupe todo el espacio
-    sin distorsionarse */
+#cards .card {
+    width: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    row-gap: 10px;
+}
+
+#cards .card img {
+    width: 100%;
+    height: 300px;
     object-fit: cover;
     border: 1px solid black;
     transition: 0.3s ease-in-out all;
@@ -259,39 +254,19 @@ header #logo img {
 
 #cards .card.primero {
     grid-area: primero;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 5px;
 }
 
 #cards .card.segundo {
     grid-area: segundo;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 5px;
 }
 
 #cards .card.tercero {
     grid-area: tercero;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 5px;
 }
 
 #cards .card.cuarto {
     grid-area: cuarto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 5px;
-} 
+}
 
 #cards h4 {
     color: #131313;
@@ -299,12 +274,8 @@ header #logo img {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.03em;
-    /* text-shadow da un sombreado al texto. El primer valor indica el desplazamiento horizontal,
-    el segundo valor es el dezplazamiento vertical y el tercer(opcional) valor indica el desenfoque y el
-    cuarto valor indica el color */
     transition: 0.2s linear;
 }
-
 
 #cards p {
     color: #131313;
@@ -313,37 +284,29 @@ header #logo img {
     letter-spacing: 0.03em;
 }
 
-#cards .card a{
-    width: 100%;
-}
-
 #cards button {
-    display: flex; 
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 50px;
-	background: var(--color_primario);
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	font-weight: 500;
-	cursor: pointer;
-	text-transform: uppercase;
-	transition: 0.3 ease all; 
-	border-radius: 5px;
-	position: relative;
-    letter-spacing: 0.03em;
-	/* Es necesario un overflow para respetar los border/radius 
-	Y que la capa interior no sobresalga */
-	/* overflow: hidden; */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    background: var(--color_primario);
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3 ease all;
+    border-radius: 10px;
+    position: relative;
+    letter-spacing: 0.03rem;
 }
 
 #cards .card:hover button {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#cards .card:hover h4 {
-    text-shadow: 0px 0px 1px #767676;
+    box-shadow:
+        0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 footer {
@@ -351,7 +314,7 @@ footer {
     height: 170px;
     background-color: var(--color_letra);
     display: grid;
-    grid-template-columns: repeat(5 , 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "acerca_de  . direccion . redes_sociales";
     align-items: center;
@@ -426,7 +389,7 @@ footer {
     max-height: 100%;
     width: 300px;
     height: 100px;
-    border: 1px solid black
+    border: 1px solid black;
 }
 
 #redes_sociales {
@@ -435,7 +398,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     row-gap: 6px;
 }
 
@@ -457,8 +419,7 @@ footer {
     display: flex;
     justify-content: start;
     align-items: start;
-    column-gap: 10px;
-    
+    column-gap: 12px;
 }
 
 #tiktok,
@@ -472,7 +433,6 @@ footer {
     position: relative;
     overflow: hidden;
     display: inline-flex;
-    
 }
 
 #facebook {
@@ -484,9 +444,8 @@ footer {
     /* overflow: hidden; */
 }
 
-
 #redes_sociales div a {
-    width: 100% ;
+    width: 100%;
     height: 100%;
     position: relative;
     z-index: 2;
@@ -499,12 +458,11 @@ footer {
     stroke: black;
     stroke-width: 0.5px;
     /* position: relative; */
-
 }
 
 #redes_sociales #facebook a {
     display: inline-flex;
-    color: black ;
+    color: black;
     width: 44px;
     height: 44px;
     padding: 10px;
@@ -532,7 +490,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 
 /* !Atajos CSS grid:
 1. place-items (align-items, justify-items)

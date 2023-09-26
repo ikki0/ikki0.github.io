@@ -11,20 +11,13 @@
 }
 * img {
   max-width: 100%;
-  /* la realcion de aspecto de un libro manga es muy cercana a
-  12/18 */
   aspect-ratio: 12/18;
   width: 350px;
-  /* width: 350px;
-  height: 550px; */
-  /* esta propiedad sirve para que la imagen ocupe todo el espacio
-    sin distorsionarse */
   object-fit: cover;
   border: 1px solid black;
   transition: 0.3s ease-in-out all;
   margin-bottom: 20px;
   cursor: pointer;
-  
 }
 body {
   width: 100%;
@@ -37,7 +30,7 @@ body {
 
 .main {
   width: 90%;
-  height: 93%;
+  height: 85%;
   background-color: var(--color_secundario);
   border-radius: 10px;
   display: flex;
@@ -48,7 +41,6 @@ body {
 .wrap {
   width: 90%;
   height: 90%;
-  /* background-color: blue; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 9fr;
@@ -71,7 +63,17 @@ body {
   margin-top: 20px;
   letter-spacing: 0.05em;
   /* Para hacer un degradado de color arco iris*/
-  background: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+  background: repeating-linear-gradient(
+    to right,
+    #c4e17f 50px,
+    #f7fdca 50px,
+    #fad071 50px,
+    #f0766b,
+    #db9dbe,
+    #c49cdf,
+    #6599e2,
+    #61c2e4
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -97,7 +99,6 @@ body {
   column-gap: 30px;
 }
 
-
 .enlace a img:hover {
   transform: translateY(-15px);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
@@ -119,7 +120,6 @@ body {
   font-size: 40px;
   letter-spacing: 0.03em;
   transition: 0.2s linear all;
-  
 }
 
 .informacion p {
@@ -129,16 +129,13 @@ body {
   font-weight: 500;
   font-size: 25px;
   transition: 0.2s linear all;
-  
 }
 
 .card a {
   height: 100%;
-  
 }
 
-.informacion:hover h3, 
+.informacion:hover h3,
 .informacion:hover p {
   text-shadow: 0px 0px 0.9px #767676;
-
 }
