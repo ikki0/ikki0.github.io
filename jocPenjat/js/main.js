@@ -124,11 +124,11 @@ function analizaJuego(letra) {
     pPalabraCorrecta.classList.remove('hidden');
     infoWrite.classList.add('hidden');
     // agregamos el contadorGanadas al localStorage
+    contadorGanadas++;
     window.localStorage.setItem('partidasGanadas', contadorGanadas);
     soundWinner.play();
     // juegoActivo a false para que no se pueda seguir jugando
     juegoActivo = false;
-    contadorGanadas++;
     juegoTerminado();
   }
 
@@ -147,11 +147,11 @@ function analizaJuego(letra) {
     pPalabraCorrecta.classList.remove('hidden');
     infoWrite.classList.add('hidden');
     // agregar contador perdidas al localStorage
+    contadorPerdidas++;
     window.localStorage.setItem('partidasPerdidas', contadorPerdidas);
     soundLoser.play();
 
     juegoActivo = false;
-    contadorPerdidas++;
     juegoTerminado();
   }
 
@@ -244,12 +244,16 @@ function estadisticas() {
     window.localStorage.getItem("partidasGanadas") * (100 / window.localStorage.getItem("totalPartidas"))
   );
   /// Si totalGanadas es Nan -> 0
-  if (isNaN(totalGanadas)) { totalGanadas = 0 }
+  if (isNaN(totalGanadas)) {
+    totalGanadas = 0
+  }
   let totalPerdidas = Math.round(
     window.localStorage.getItem("partidasPerdidas") * (100 / window.localStorage.getItem("totalPartidas"))
   );
   // Si totalPerdidas es Nan -> 0
-  if (isNaN(totalPerdidas)) { totalPerdidas = 0 }
+  if (isNaN(totalPerdidas)) {
+    totalPerdidas = 0
+  }
 
   alert(`---ESTADÍSTICAS DE LA PARTIDA---
     Total Partidas Jugadas: ${totalPartidas},
